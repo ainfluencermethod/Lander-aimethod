@@ -45,8 +45,8 @@ export const TESTIMONIALS: Testimonial[] = [
     earnings: '$61,300',
     content: '"HELPED US GROW AI INFLUENCER IN CRYPTO NICHE" - This is the group you want to join if you\'re serious about going viral. We hit 100k in 14 days.',
     timestamp: '3 weeks ago',
-    image: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6957be2005b51121e0979868.png',
-    video: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/69470702106fdc86a32e247f.mp4'
+    image: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/69580f14748303b6b2aa94b1.png',
+    video: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6947fd7eaca6ab01a4d422cc.mp4'
   }
 ];
 

@@ -21,7 +21,7 @@ export const GuaranteeSection: React.FC = () => {
         </div>
 
         <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight">
-          <span className="text-[#b0ff3e]">30-Day</span> <span className="italic text-white">"Profit Or Refund"</span><br />
+          <span className="text-[#b0ff3e]">14-Day</span> <span className="italic text-white">"Profit Or Refund"</span><br />
           <span className="underline decoration-zinc-700 underline-offset-8 text-white">Guarantee</span>
         </h2>
 
@@ -49,7 +49,7 @@ export const GuaranteeSection: React.FC = () => {
             </p>
             
             <p className="text-zinc-400 font-medium text-lg leading-relaxed max-w-xl mx-auto">
-                Try it risk-free for 30 days. If you don't make money, email <span className="text-white font-bold">max@ainfluencreblueprint.com</span> for a complete refund.
+                Try it risk-free for 14 days. If you don't make money, email <span className="text-white font-bold">max@ainfluencreblueprint.com</span> for a complete refund.
             </p>
             
             <p className="text-white font-bold text-lg italic">

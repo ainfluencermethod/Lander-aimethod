@@ -146,7 +146,7 @@ export const OfferSection: React.FC = () => {
 
                <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-4 text-[10px] md:text-xs font-black uppercase tracking-widest text-black/60">
                  <div className="flex items-center gap-1.5">
-                    <ShieldCheck size={16} /> 30-Day Money Back Guarantee
+                    <ShieldCheck size={16} /> 14-Day Money Back Guarantee
                  </div>
                  <div className="hidden md:block opacity-30">•</div>
                  <div className="flex items-center gap-1.5">
