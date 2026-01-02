@@ -29,13 +29,8 @@ export const OfferSection: React.FC = () => {
             <div key={f.id} className="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 hover:border-[#b0ff3e]/30 transition-colors flex flex-col justify-between relative group">
               <div>
                 <h4 className="font-black text-sm text-[#b0ff3e] tracking-widest uppercase mb-2 italic">{f.title}</h4>
-                <p className="text-zinc-400 text-xs font-medium leading-relaxed mb-8">{f.description}</p>
+                <p className="text-zinc-400 text-xs font-medium leading-relaxed">{f.description}</p>
               </div>
-              {f.value && (
-                  <div className="absolute bottom-4 right-4 text-indigo-400 font-black text-2xl italic tracking-tighter opacity-50 group-hover:opacity-100 transition-opacity">
-                      {f.value}
-                  </div>
-              )}
             </div>
           ))}
         </div>

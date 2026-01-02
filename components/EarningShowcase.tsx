@@ -18,6 +18,19 @@ export const EarningShowcase: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Ensure autoplay works reliably
+  useEffect(() => {
+    if (videoRef.current) {
+        const playPromise = videoRef.current.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(() => {
+                // Auto-play was prevented
+                setIsPlaying(false);
+            });
+        }
+    }
+  }, []);
+
   const scrollToCheckout = () => {
     document.getElementById('checkout')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -43,8 +56,13 @@ export const EarningShowcase: React.FC = () => {
   const handleTimeUpdate = () => {
     if (videoRef.current) {
       setCurrentTime(videoRef.current.currentTime);
-      const prog = (videoRef.current.currentTime / videoRef.current.duration) * 100;
-      setProgress(prog || 0);
+      const duration = videoRef.current.duration;
+      if (Number.isFinite(duration) && duration > 0) {
+        const prog = (videoRef.current.currentTime / duration) * 100;
+        setProgress(prog);
+      } else {
+        setProgress(0);
+      }
     }
   };
 
@@ -59,8 +77,16 @@ export const EarningShowcase: React.FC = () => {
       const rect = e.currentTarget.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const width = rect.width;
-      const percentage = Math.max(0, Math.min(1, x / width));
-      videoRef.current.currentTime = percentage * videoRef.current.duration;
+      
+      if (width > 0) {
+        const percentage = Math.max(0, Math.min(1, x / width));
+        const duration = videoRef.current.duration;
+        
+        // Only set currentTime if duration is valid and finite
+        if (Number.isFinite(duration)) {
+          videoRef.current.currentTime = percentage * duration;
+        }
+      }
     }
   };
 
@@ -74,7 +100,7 @@ export const EarningShowcase: React.FC = () => {
   };
 
   const formatTime = (time: number) => {
-    if (!time || isNaN(time)) return "0:00";
+    if (!time || isNaN(time) || !Number.isFinite(time)) return "0:00";
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
@@ -150,9 +176,9 @@ export const EarningShowcase: React.FC = () => {
 
             {/* Centered Play Button (Visible when paused) */}
             {!isPlaying && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40 z-20 backdrop-blur-sm">
-                    <div className="w-20 h-20 bg-[#b0ff3e] rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(176,255,62,0.5)] transform hover:scale-110 transition-transform">
-                        <Play className="fill-black text-black ml-1" size={32} />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/60 z-20 backdrop-blur-sm">
+                    <div className="w-24 h-24 bg-[#b0ff3e] rounded-full flex items-center justify-center shadow-[0_0_60px_rgba(176,255,62,0.6)] transform hover:scale-110 transition-transform">
+                        <Play className="fill-black text-black ml-2" size={48} />
                     </div>
                 </div>
             )}
@@ -189,9 +215,9 @@ export const EarningShowcase: React.FC = () => {
                </div>
             </div>
             
-            {/* Revenue Overlay Card */}
+            {/* Revenue Overlay Card - HIDDEN ON MOBILE */}
             <div 
-              className={`absolute inset-0 flex items-center justify-center z-40 pointer-events-none transition-all duration-700 ease-out ${showOverlay ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+              className={`hidden md:flex absolute inset-0 items-center justify-center z-40 pointer-events-none transition-all duration-700 ease-out ${showOverlay ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
             >
                <div className="bg-black/90 backdrop-blur-xl p-8 rounded-[32px] border border-[#b0ff3e]/30 shadow-[0_20px_60px_rgba(0,0,0,0.8)] text-center space-y-4 max-w-xs w-full mx-4">
                   <div className="space-y-1">
