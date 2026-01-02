@@ -35,79 +35,18 @@ export const TESTIMONIALS: Testimonial[] = [
     earnings: '$12,400',
     content: '"HELPED ME GROW MY FACELESS YOUTUBE CHANNEL TO 300K" - This is a game-changer for Youtube automation. The consistency workflow alone saved me weeks of work.',
     timestamp: '2 weeks ago',
-    image: 'input_file_0.png'
+    image: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6957be20d350afb784a69ddf.png',
+    video: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/69277eb45f7cbc1156d0a668.mp4'
   },
   {
     id: '2',
     name: '@ness.hl',
     avatar: 'https://picsum.photos/seed/ness/100/100',
-    earnings: '$8,900',
+    earnings: '$61,300',
     content: '"HELPED US GROW AI INFLUENCER IN CRYPTO NICHE" - This is the group you want to join if you\'re serious about going viral. We hit 100k in 14 days.',
     timestamp: '3 weeks ago',
-    image: 'input_file_2.png'
-  },
-  {
-    id: '3',
-    name: '@mura.ai',
-    avatar: 'https://picsum.photos/seed/mura/100/100',
-    earnings: '$15,200',
-    content: '"$15K IN BRAND DEALS IN MONTH 2" - I thought I needed a huge following. Turns out high-quality AI content is all brands want right now.',
-    timestamp: '1 month ago',
-    image: 'input_file_1.png'
-  },
-  {
-    id: '4',
-    name: '@koda_digital',
-    avatar: 'https://picsum.photos/seed/koda/100/100',
-    earnings: '$22,000',
-    content: '"1.2M FOLLOWERS IN 90 DAYS" - The scaling systems here are insane. We are now running 4 different characters across 3 platforms.',
-    timestamp: '5 days ago',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: '5',
-    name: '@luna.vibes',
-    avatar: 'https://picsum.photos/seed/luna/100/100',
-    earnings: '$4,200',
-    content: '"FIRST $4K MONTH AS A STUDENT" - I work 2 hours a day after my 9-5. The automation handles 80% of the heavy lifting.',
-    timestamp: '1 week ago',
-    image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: '6',
-    name: '@jaxon_fitness',
-    avatar: 'https://picsum.photos/seed/jaxon/100/100',
-    earnings: '$31,000',
-    content: '"REVENUE SKYROCKETED" - Implementing the Phase 3 monetization strategy doubled our affiliate conversion rates overnight.',
-    timestamp: '2 months ago',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: '7',
-    name: '@alex.creations',
-    avatar: 'https://picsum.photos/seed/alex/100/100',
-    earnings: '$6,500',
-    content: '"QUIT MY JOB IN 60 DAYS" - The community support in the Discord is what kept me going. Best investment of the year.',
-    timestamp: '1 week ago',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: '8',
-    name: '@zen.ai',
-    avatar: 'https://picsum.photos/seed/zen/100/100',
-    earnings: '$11,200',
-    content: '"THE AUTOMATED WORKFLOW IS UNREAL" - I am now running three accounts and it takes me less than 1 hour a day to post.',
-    timestamp: '4 days ago',
-    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: '9',
-    name: '@nova.media',
-    avatar: 'https://picsum.photos/seed/nova/100/100',
-    earnings: '$9,100',
-    content: '"FOLLOWERS DON\'T MATTER, SYSTEMS DO" - We hit our first $1k day with only 2,000 followers thanks to Phase 3.',
-    timestamp: '12 days ago',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop'
+    image: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6957be2005b51121e0979868.png',
+    video: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/69470702106fdc86a32e247f.mp4'
   }
 ];
 

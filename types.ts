@@ -7,6 +7,7 @@ export interface Testimonial {
   content: string;
   timestamp: string;
   image?: string;
+  video?: string;
 }
 
 export interface Feature {

@@ -10,14 +10,16 @@ import { StepByStep } from './components/StepByStep';
 import { IncomeCalculator } from './components/IncomeCalculator';
 import { FAQSection } from './components/FAQSection';
 import { Footer } from './components/Footer';
+import { WhoForSection } from './components/WhoForSection';
+import { GuaranteeSection } from './components/GuaranteeSection';
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen selection:bg-[#b0ff3e] selection:text-black">
       {/* Top Banner */}
-      <div className="bg-[#b0ff3e] text-black py-2 text-center font-black text-xs tracking-widest uppercase">
+      <div className="bg-[#b0ff3e] text-black py-2.5 text-center font-black text-[11px] tracking-widest uppercase">
         <span className="bg-white/40 px-2 py-0.5 rounded-sm mr-2 font-black">NEW</span>
-        The Laziest Way to Earn in 2025
+        The Laziest Way to Earn in 2026
       </div>
 
       <Hero />
@@ -25,10 +27,19 @@ const App: React.FC = () => {
       <main className="max-w-4xl mx-auto px-4 space-y-24 pb-24">
         <EarningShowcase />
         <LogicSection />
+      </main>
+
+      {/* Full width section for WhoFor to allow background to span */}
+      <div className="w-full my-24">
+        <WhoForSection />
+      </div>
+
+      <main className="max-w-4xl mx-auto px-4 space-y-24 pb-24">
         <FoundersSection />
         <StepByStep />
         <ProofSection />
         <OfferSection />
+        <GuaranteeSection />
         
         {/* Final CTA */}
         <div className="pt-12">

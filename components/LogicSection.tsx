@@ -1,12 +1,13 @@
 
 import React from 'react';
+import { Eye } from 'lucide-react';
 
 export const LogicSection: React.FC = () => {
   return (
     <section className="space-y-16">
       <div className="text-center space-y-6">
         <div className="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-full text-zinc-500 text-[10px] font-black uppercase tracking-widest">
-           <span className="text-indigo-500 animate-pulse">●</span> The AI Arbitrage
+           <span className="text-indigo-500 animate-pulse">●</span> THE AI ARBITRAGE
         </div>
         <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight max-w-4xl mx-auto text-balance text-white">
           What If You Got <span className="text-[#b0ff3e]">Paid Every Time</span> Someone Watched <br />
@@ -17,45 +18,39 @@ export const LogicSection: React.FC = () => {
       <div className="grid md:grid-cols-3 gap-6">
         {[
           { 
-            img: 'input_file_0.png', 
-            label: '17.3M VIEWS',
-            desc: 'Fishing Viral Moment',
-            // Image input_file_0.png already contains the "started when my mom..." text
+            img: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6957a2f5748303ef559edb8c.png', 
+            label: '17.3M',
+            desc: 'TRAVEL VIRAL MOMENT'
           },
           { 
-            img: 'input_file_2.png', 
-            label: '61.3M VIEWS',
-            desc: 'Character & Partner Hook',
-            isDashboard: false
+            img: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6957a2f5edb8a229283ca82a.png', 
+            label: '61.3M',
+            desc: 'MIRROR SELFIE HOOK'
           },
           { 
-            img: 'input_file_1.png', 
-            label: '5.2M VIEWS',
-            desc: 'Daily Habit Mirror Selfie'
+            img: 'https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6957a2f5edb8a2537f3ca82b.png', 
+            label: '5.2M',
+            desc: 'CHARACTER COLLAB'
           }
         ].map((item, idx) => (
-          <div key={idx} className="relative aspect-[9/16] rounded-3xl overflow-hidden group border border-white/5 bg-zinc-900 shadow-2xl">
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+          <div key={idx} className="relative aspect-[9/16] rounded-[32px] overflow-hidden group border border-white/10 bg-black shadow-2xl transition-all hover:border-[#b0ff3e]/30">
             <img 
               src={item.img} 
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 contrast-125 saturate-[1.1]" 
+              className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700" 
               alt={item.desc} 
             />
             
-            {/* View Count Overlay */}
-            <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black via-black/90 to-transparent z-20">
-               <div className="space-y-1">
-                 <div className="flex items-center gap-2">
-                   <div className="w-2 h-2 rounded-full bg-[#b0ff3e] shadow-[0_0_10px_#b0ff3e]"></div>
-                   <span className="text-white text-xl font-black tracking-tighter glow-primary-text uppercase">
-                     {item.label}
-                   </span>
-                 </div>
-                 <p className="text-zinc-400 text-[10px] font-black uppercase tracking-[0.2em] opacity-80">
-                   {item.desc}
-                 </p>
-               </div>
+            {/* View Count Overlay - Matching the provided screenshot */}
+            <div className="absolute bottom-6 left-6 z-30 flex items-center gap-2 text-white/95 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+              <Eye size={18} className="stroke-[3px]" />
+              <span className="font-black text-xl tracking-tight">{item.label}</span>
             </div>
+
+            {/* Glossy Overlay on Hover */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none"></div>
+            
+            {/* Subtle Vignette & Shadow Bottom */}
+            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[32px] z-20 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
           </div>
         ))}
       </div>
@@ -63,7 +58,7 @@ export const LogicSection: React.FC = () => {
       <div className="max-w-3xl mx-auto space-y-12">
         <div className="flex items-center gap-4">
           <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-zinc-800"></div>
-          <h3 className="text-2xl italic font-bold shrink-0">The Game Has Changed...</h3>
+          <h3 className="text-2xl italic font-bold shrink-0 text-white">The Game Has Changed...</h3>
           <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-zinc-800"></div>
         </div>
         

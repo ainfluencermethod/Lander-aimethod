@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { FEATURES, BONUSES } from '../constants';
-import { Gift, Users, ShieldCheck, Zap } from 'lucide-react';
+import { Gift, Users, ShieldCheck, Zap, Check } from 'lucide-react';
 
 export const OfferSection: React.FC = () => {
   const whopLink = "https://whop.com/checkout/plan_GuUsHdQ2URrN7/";
@@ -14,12 +14,13 @@ export const OfferSection: React.FC = () => {
         <p className="text-zinc-400 font-medium">The only copy-paste protocol for building <span className="text-white underline decoration-[#b0ff3e]">viral AI INFLUENCERS</span>.</p>
       </div>
 
-      <div className="bg-zinc-950/80 backdrop-blur-xl border border-zinc-800 rounded-3xl p-6 md:p-10 mb-8">
+      <div className="bg-zinc-950/80 backdrop-blur-xl border border-zinc-800 rounded-3xl p-6 md:p-10 mb-8 relative">
+        
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
           <h3 className="text-white font-black text-2xl tracking-tight uppercase italic underline decoration-rose-600">The Curriculum</h3>
           <div className="flex items-center gap-2 bg-indigo-500/10 px-4 py-2 rounded-full border border-indigo-500/20">
             <Users size={16} className="text-indigo-400" />
-            <span className="text-[10px] font-black text-indigo-300 uppercase tracking-widest">INCLUDES VIP COMMUNITY ACCESS</span>
+            <span className="text-[10px] font-black text-indigo-300 uppercase tracking-widest">weekly updates</span>
           </div>
         </div>
 
@@ -56,47 +57,105 @@ export const OfferSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center bg-zinc-900/80 rounded-3xl p-8 border border-zinc-800 relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-4 opacity-10">
-            <ShieldCheck size={120} className="text-[#b0ff3e]" />
+        {/* Value Stack & Pricing - Redesigned */}
+        <div className="mt-16 max-w-2xl mx-auto">
+          {/* The Stack */}
+          <div className="bg-zinc-900 rounded-t-3xl p-8 border border-zinc-800 border-b-0 space-y-4 relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-3 opacity-5">
+                  <ShieldCheck size={100} />
+              </div>
+              <div className="text-center mb-8 relative z-10">
+                 <h4 className="text-2xl font-black italic text-white tracking-tight">EVERYTHING YOU GET TODAY:</h4>
+              </div>
+              
+              {/* List items */}
+              <div className="space-y-3 relative z-10">
+                  <div className="flex justify-between items-center p-3 bg-black/40 rounded-lg border border-zinc-800/50">
+                     <div className="flex items-center gap-3">
+                        <div className="bg-[#b0ff3e]/10 p-1 rounded">
+                            <Check size={14} className="text-[#b0ff3e]" />
+                        </div>
+                        <span className="font-bold text-zinc-300 text-sm md:text-base">AI Influencer Blueprint Course</span>
+                     </div>
+                     <span className="font-black text-white">$2,997</span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-black/40 rounded-lg border border-zinc-800/50">
+                     <div className="flex items-center gap-3">
+                        <div className="bg-[#b0ff3e]/10 p-1 rounded">
+                            <Check size={14} className="text-[#b0ff3e]" />
+                        </div>
+                        <span className="font-bold text-zinc-300 text-sm md:text-base">AI Influencer Method Course</span>
+                     </div>
+                     <span className="font-black text-white">$1,500</span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-black/40 rounded-lg border border-zinc-800/50">
+                     <div className="flex items-center gap-3">
+                        <div className="bg-[#b0ff3e]/10 p-1 rounded">
+                            <Check size={14} className="text-[#b0ff3e]" />
+                        </div>
+                        <span className="font-bold text-zinc-300 text-sm md:text-base">Viral Content Database</span>
+                     </div>
+                     <span className="font-black text-white">$497</span>
+                  </div>
+                   <div className="flex justify-between items-center p-3 bg-black/40 rounded-lg border border-zinc-800/50">
+                     <div className="flex items-center gap-3">
+                        <div className="bg-[#b0ff3e]/10 p-1 rounded">
+                            <Check size={14} className="text-[#b0ff3e]" />
+                        </div>
+                        <span className="font-bold text-zinc-300 text-sm md:text-base">Private VIP community ($97/ mo)</span>
+                     </div>
+                     <span className="font-black text-white">$997/yr</span>
+                  </div>
+              </div>
+
+              <div className="pt-6 pb-2 text-center relative z-10">
+                 <div className="text-zinc-500 font-bold uppercase text-xs tracking-widest mb-2">Total Value</div>
+                 <div className="text-4xl md:text-5xl font-black text-zinc-400 line-through decoration-rose-600 decoration-[3px] opacity-70">$5,991</div>
+              </div>
           </div>
-          <div className="text-zinc-500 font-black line-through text-2xl mb-1">$5,500+ Total Value</div>
-          <div className="flex flex-col items-center justify-center gap-3 relative z-10">
-             <span className="text-4xl md:text-6xl font-black tracking-tighter italic">Get Everything For <span className="text-[#b0ff3e]">$97</span></span>
-             <div className="bg-[#b0ff3e]/20 text-[#b0ff3e] text-[10px] font-black py-1.5 px-6 rounded-full uppercase tracking-[0.2em] animate-pulse border border-[#b0ff3e]/30">
-                LIFETIME ACCESS INCLUDES PRIVATE COMMUNITY
-             </div>
+
+          {/* The Price Card */}
+          <div className="bg-[#b0ff3e] rounded-[32px] p-8 md:p-12 text-center relative shadow-[0_0_80px_rgba(176,255,62,0.3)] transform md:scale-105 z-10 border-4 border-black/5">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black text-white px-8 py-3 rounded-full font-black text-xs md:text-sm tracking-widest uppercase border-[3px] border-[#b0ff3e] shadow-xl whitespace-nowrap">
+                Save 98% Today
+              </div>
+
+              <div className="space-y-4 mb-8 mt-4">
+                 <p className="text-black/70 font-black uppercase tracking-[0.2em] text-xs">Join The Blueprint For Only</p>
+                 <div className="flex items-start justify-center gap-1 text-black leading-none">
+                    <span className="text-4xl md:text-5xl font-black mt-2 md:mt-4">$</span>
+                    <span className="text-[7rem] md:text-[9rem] font-black tracking-tighter">97</span>
+                    <span className="text-2xl md:text-3xl font-black mt-8 md:mt-12">/mo</span>
+                 </div>
+                 <div className="bg-black/10 inline-block px-4 py-1 rounded-full">
+                    <p className="text-black font-bold text-xs md:text-sm">
+                        Less than $3.25/day • Cancel Anytime
+                    </p>
+                 </div>
+              </div>
+
+              <a 
+                href={whopLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-black text-white font-black py-6 rounded-2xl text-xl md:text-3xl text-center block uppercase tracking-tighter hover:scale-[1.02] transition-transform shadow-2xl active:scale-95 border border-white/10 relative overflow-hidden group"
+              >
+                <span className="relative z-10">Start Your AI Empire Now →</span>
+                <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+              </a>
+
+               <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-4 text-[10px] md:text-xs font-black uppercase tracking-widest text-black/60">
+                 <div className="flex items-center gap-1.5">
+                    <ShieldCheck size={16} /> 30-Day Money Back Guarantee
+                 </div>
+                 <div className="hidden md:block opacity-30">•</div>
+                 <div className="flex items-center gap-1.5">
+                    <Zap size={16} /> Instant Access
+                 </div>
+               </div>
           </div>
         </div>
 
-        <div className="mt-12">
-          <a 
-            href={whopLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full bg-[#b0ff3e] text-black font-black py-6 rounded-2xl text-xl text-center block uppercase tracking-tight hover:scale-[1.01] transition-transform shadow-[0_20px_40px_rgba(176,255,62,0.3)] active:scale-95"
-          >
-            Enroll In AI Influencer Blueprint Now →
-          </a>
-          
-          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-             {[
-               { icon: Zap, text: "Instant Setup" },
-               { icon: ShieldCheck, text: "Secure Whop Checkout" },
-               { icon: Users, text: "1,000+ Members" },
-               { icon: Gift, text: "4 Free Bonuses" }
-             ].map((item, i) => (
-               <div key={i} className="flex items-center justify-center gap-2 opacity-60">
-                 <item.icon size={12} className="text-[#b0ff3e]" />
-                 <span className="text-[10px] font-black uppercase tracking-widest text-zinc-400">{item.text}</span>
-               </div>
-             ))}
-          </div>
-          
-          <p className="text-zinc-500 text-[10px] font-bold uppercase tracking-widest text-center mt-6 italic">
-            Risk-Free Guarantee • Join The Revolution
-          </p>
-        </div>
       </div>
     </section>
   );

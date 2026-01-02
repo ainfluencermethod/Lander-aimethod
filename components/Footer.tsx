@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
       <p className="text-zinc-700 text-[9px] max-w-lg mx-auto leading-relaxed">
         DISCLAIMER: This site is not a part of the TikTok or Facebook website. Results are not typical. We do not guarantee you will earn any money. Your success depends on your effort and market conditions.
       </p>
-      <div className="text-zinc-800 text-[10px] pt-4">© 2025 AI Influencer Method. All rights reserved.</div>
+      <div className="text-zinc-800 text-[10px] pt-4">© 2026 AI Influencer Method. All rights reserved.</div>
     </footer>
   );
 };

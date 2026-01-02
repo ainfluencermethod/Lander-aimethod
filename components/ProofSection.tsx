@@ -12,17 +12,28 @@ export const ProofSection: React.FC = () => {
         <p className="text-zinc-500 font-bold uppercase tracking-widest text-sm">Real Results From Our Students</p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {TESTIMONIALS.map(t => (
-          <div key={t.id} className="bg-zinc-900/40 backdrop-blur rounded-[32px] overflow-hidden border border-zinc-800/50 p-4 hover:border-zinc-700 transition-all group hover:-translate-y-1">
+          <div key={t.id} className="bg-zinc-900/40 backdrop-blur rounded-[32px] overflow-hidden border border-zinc-800/50 p-4 hover:border-zinc-700 transition-all group hover:-translate-y-1 shadow-2xl">
             <div className="relative aspect-video rounded-2xl overflow-hidden mb-6 bg-black border border-white/5">
-              <img 
-                src={t.image} 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                alt="Success proof" 
-              />
-              {/* Removed video badges and play buttons as per request */}
-              <div className="absolute bottom-4 right-4 bg-[#b0ff3e] text-black text-[10px] font-black px-3 py-1.5 rounded-full shadow-[0_4px_20px_rgba(176,255,62,0.4)]">
+              {t.video ? (
+                 <video 
+                   src={t.video} 
+                   className="w-full h-full object-cover" 
+                   controls 
+                   playsInline
+                   preload="metadata"
+                   poster={t.image}
+                 />
+              ) : (
+                <img 
+                  src={t.image} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  alt="Success proof" 
+                />
+              )}
+              {/* Earnings badge positioned to overlay bottom right, pointing events none so controls can be used if nearby, although z-index ensures visibility */}
+              <div className="absolute bottom-4 right-4 bg-[#b0ff3e] text-black text-[10px] font-black px-3 py-1.5 rounded-full shadow-[0_4px_20px_rgba(176,255,62,0.4)] pointer-events-none z-10">
                 {t.earnings} Earnings
               </div>
             </div>
@@ -44,6 +55,24 @@ export const ProofSection: React.FC = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Added Student Wins Screenshots */}
+      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+         <div className="rounded-[32px] overflow-hidden border border-zinc-800/50 shadow-2xl group hover:border-zinc-700 transition-all bg-zinc-900/20">
+             <img 
+               src="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6957c01b4478a27122baa26b.png" 
+               className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500" 
+               alt="Student Result Win 1" 
+             />
+         </div>
+         <div className="rounded-[32px] overflow-hidden border border-zinc-800/50 shadow-2xl group hover:border-zinc-700 transition-all bg-zinc-900/20">
+             <img 
+               src="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/6957c01b05b51169d797ba7e.png" 
+               className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500" 
+               alt="Student Result Win 2" 
+             />
+         </div>
       </div>
 
       <div className="bg-indigo-500/10 border border-indigo-500/20 p-8 md:p-12 rounded-[40px] text-center max-w-2xl mx-auto relative overflow-hidden group">
