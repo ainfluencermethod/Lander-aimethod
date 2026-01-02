@@ -166,6 +166,7 @@ export const EarningShowcase: React.FC = () => {
               ref={videoRef}
               className="absolute inset-0 w-full h-full object-cover"
               src="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/694d0c20dda19201e3593e07.mp4" 
+              poster="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/69584f494aa66947d2eba68a.png"
               autoPlay
               muted={isMuted}
               loop
