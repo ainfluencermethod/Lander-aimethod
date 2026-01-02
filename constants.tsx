@@ -8,22 +8,26 @@ export const FEATURES: Feature[] = [
   {
     id: 'consistency',
     title: 'PHASE 1: CHARACTER CONSISTENCY',
-    description: 'Learn the "DNA Framework" to keep your AI character looking the same across thousands of images and various backgrounds.'
+    description: 'Learn the "DNA Framework" to keep your AI character looking the same across thousands of images and various backgrounds.',
+    value: '$497'
   },
   {
     id: 'production',
     title: 'PHASE 2: HOLLYWOOD PRODUCTION',
-    description: 'Turn static images into viral videos using tools like Higgsfield + our secret high-fidelity editing workflow.'
+    description: 'Turn static images into viral videos using tools like Higgsfield + our secret high-fidelity editing workflow.',
+    value: '$497'
   },
   {
     id: 'monetization',
     title: 'PHASE 3: MONETISATION MASTERY',
-    description: 'The psychology of converting "cold" traffic into automated revenue through digital products and high-ticket affiliate deals.'
+    description: 'The psychology of converting "cold" traffic into automated revenue through digital products and high-ticket affiliate deals.',
+    value: '$497'
   },
   {
     id: 'community',
     title: 'PHASE 4: THE INNER CIRCLE VIP COMMUNITY',
-    description: 'Direct access to Tim, Luka, and 1,000+ other students. Daily wins, updated prompts, and networking with top creators.'
+    description: 'Direct access to Tim, Luka, and 1,000+ other students. Daily wins, updated prompts, and networking with top creators.',
+    value: '$997'
   }
 ];
 

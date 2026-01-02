@@ -14,6 +14,7 @@ export interface Feature {
   id: string;
   title: string;
   description: string;
+  value?: string;
 }
 
 export enum CheckoutStep {

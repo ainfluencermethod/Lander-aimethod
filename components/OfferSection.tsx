@@ -26,11 +26,16 @@ export const OfferSection: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-4 mb-12">
           {FEATURES.map(f => (
-            <div key={f.id} className="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 hover:border-[#b0ff3e]/30 transition-colors flex flex-col justify-between">
+            <div key={f.id} className="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 hover:border-[#b0ff3e]/30 transition-colors flex flex-col justify-between relative group">
               <div>
                 <h4 className="font-black text-sm text-[#b0ff3e] tracking-widest uppercase mb-2 italic">{f.title}</h4>
-                <p className="text-zinc-400 text-xs font-medium leading-relaxed">{f.description}</p>
+                <p className="text-zinc-400 text-xs font-medium leading-relaxed mb-8">{f.description}</p>
               </div>
+              {f.value && (
+                  <div className="absolute bottom-4 right-4 text-indigo-400 font-black text-2xl italic tracking-tighter opacity-50 group-hover:opacity-100 transition-opacity">
+                      {f.value}
+                  </div>
+              )}
             </div>
           ))}
         </div>
@@ -75,18 +80,9 @@ export const OfferSection: React.FC = () => {
                         <div className="bg-[#b0ff3e]/10 p-1 rounded">
                             <Check size={14} className="text-[#b0ff3e]" />
                         </div>
-                        <span className="font-bold text-zinc-300 text-sm md:text-base">AI Influencer Blueprint Course</span>
-                     </div>
-                     <span className="font-black text-white">$2,997</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-black/40 rounded-lg border border-zinc-800/50">
-                     <div className="flex items-center gap-3">
-                        <div className="bg-[#b0ff3e]/10 p-1 rounded">
-                            <Check size={14} className="text-[#b0ff3e]" />
-                        </div>
                         <span className="font-bold text-zinc-300 text-sm md:text-base">AI Influencer Method Course</span>
                      </div>
-                     <span className="font-black text-white">$1,500</span>
+                     <span className="font-black text-white">$297</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-black/40 rounded-lg border border-zinc-800/50">
                      <div className="flex items-center gap-3">
@@ -96,6 +92,15 @@ export const OfferSection: React.FC = () => {
                         <span className="font-bold text-zinc-300 text-sm md:text-base">Viral Content Database</span>
                      </div>
                      <span className="font-black text-white">$497</span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-black/40 rounded-lg border border-zinc-800/50">
+                     <div className="flex items-center gap-3">
+                        <div className="bg-[#b0ff3e]/10 p-1 rounded">
+                            <Check size={14} className="text-[#b0ff3e]" />
+                        </div>
+                        <span className="font-bold text-zinc-300 text-sm md:text-base">Weavy Workflows</span>
+                     </div>
+                     <span className="font-black text-white">$1,500</span>
                   </div>
                    <div className="flex justify-between items-center p-3 bg-black/40 rounded-lg border border-zinc-800/50">
                      <div className="flex items-center gap-3">
@@ -110,7 +115,7 @@ export const OfferSection: React.FC = () => {
 
               <div className="pt-6 pb-2 text-center relative z-10">
                  <div className="text-zinc-500 font-bold uppercase text-xs tracking-widest mb-2">Total Value</div>
-                 <div className="text-4xl md:text-5xl font-black text-zinc-400 line-through decoration-rose-600 decoration-[3px] opacity-70">$5,991</div>
+                 <div className="text-4xl md:text-5xl font-black text-zinc-400 line-through decoration-rose-600 decoration-[3px] opacity-70">$3,291</div>
               </div>
           </div>
 
