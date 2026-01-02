@@ -35,7 +35,7 @@ export const TESTIMONIALS: Testimonial[] = [
     earnings: '$12,400',
     content: '"HELPED ME GROW MY FACELESS YOUTUBE CHANNEL TO 300K" - This is a game-changer for Youtube automation. The consistency workflow alone saved me weeks of work.',
     timestamp: '2 weeks ago',
-    image: 'https://i.postimg.cc/HVTtjccm/Screenshot-2026-01-01-at-21-18-42.png'
+    image: 'input_file_0.png'
   },
   {
     id: '2',
@@ -44,7 +44,7 @@ export const TESTIMONIALS: Testimonial[] = [
     earnings: '$8,900',
     content: '"HELPED US GROW AI INFLUENCER IN CRYPTO NICHE" - This is the group you want to join if you\'re serious about going viral. We hit 100k in 14 days.',
     timestamp: '3 weeks ago',
-    image: 'https://i.postimg.cc/LJbkyxxy/Screenshot-2026-01-01-at-21-19-22.png'
+    image: 'input_file_2.png'
   },
   {
     id: '3',
@@ -53,7 +53,7 @@ export const TESTIMONIALS: Testimonial[] = [
     earnings: '$15,200',
     content: '"$15K IN BRAND DEALS IN MONTH 2" - I thought I needed a huge following. Turns out high-quality AI content is all brands want right now.',
     timestamp: '1 month ago',
-    image: 'https://i.postimg.cc/zycwdxxx/Screenshot-2026-01-01-at-21-20-25.png'
+    image: 'input_file_1.png'
   },
   {
     id: '4',

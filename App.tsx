@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Hero } from './components/Hero';
 import { EarningShowcase } from './components/EarningShowcase';
 import { OfferSection } from './components/OfferSection';
@@ -13,7 +13,13 @@ import { Footer } from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen selection:bg-[#b0ff3e] selection:text-black bg-[#09090b]">
+    <div className="min-h-screen selection:bg-[#b0ff3e] selection:text-black">
+      {/* Top Banner */}
+      <div className="bg-[#b0ff3e] text-black py-2 text-center font-black text-xs tracking-widest uppercase">
+        <span className="bg-white/40 px-2 py-0.5 rounded-sm mr-2 font-black">NEW</span>
+        The Laziest Way to Earn in 2025
+      </div>
+
       <Hero />
       
       <main className="max-w-4xl mx-auto px-4 space-y-24 pb-24">
