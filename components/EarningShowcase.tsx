@@ -239,8 +239,8 @@ export const EarningShowcase: React.FC = () => {
         
         <div className="flex items-center gap-2.5">
             <div className="h-2.5 w-2.5 rounded-full bg-emerald-500 shadow-[0_0_12px_#10b981] animate-pulse"></div>
-            <p className="text-xs text-zinc-500 font-black uppercase tracking-[0.2em] pt-0.5">
-                Spots Available for March Cohort
+            <p className="text-xs text-zinc-400 font-black uppercase tracking-[0.2em] pt-0.5">
+                Limited Spots Available For January Cohort
             </p>
         </div>
       </div>
