@@ -49,7 +49,7 @@ export const GuaranteeSection: React.FC = () => {
             </p>
             
             <p className="text-zinc-400 font-medium text-lg leading-relaxed max-w-xl mx-auto">
-                Try it risk-free for 14 days. If you don't make money, email <span className="text-white font-bold">max@ainfluencreblueprint.com</span> for a complete refund.
+                Try it risk-free for 14 days. If you don't make money, email <span className="text-white font-bold">max@ainfluencerblueprint.com</span> for a complete refund.
             </p>
             
             <p className="text-white font-bold text-lg italic">

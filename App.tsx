@@ -24,6 +24,7 @@ const App: React.FC = () => {
 
       <Hero />
       
+      {/* Reduced top spacing to connect Headline and VSL */}
       <main className="max-w-4xl mx-auto px-4 space-y-24 pb-24">
         <EarningShowcase />
         <LogicSection />
