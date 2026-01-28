@@ -7,29 +7,8 @@ export const Hero: React.FC = () => {
     document.getElementById('checkout')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handlePreviewClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.dispatchEvent(new Event('show-lead-magnet'));
-    try {
-      window.history.pushState({}, '', '?page=free-guide');
-    } catch (err) {
-      console.warn('Navigation state update failed (sandbox):', err);
-    }
-  };
-
   return (
     <section className="pt-16 pb-8 px-4 text-center max-w-4xl mx-auto relative">
-        {/* Preview Button */}
-        <div className="fixed top-4 right-4 z-[9999]">
-             <a 
-                href="?page=free-guide" 
-                onClick={handlePreviewClick}
-                className="text-[10px] font-bold text-zinc-500 hover:text-white transition-colors border-b border-zinc-800 pb-0.5 uppercase tracking-widest"
-             >
-                Preview Freebie
-             </a>
-        </div>
-
       <div className="space-y-8 flex flex-col items-center relative z-10 mb-12">
         
         {/* Main Headline */}

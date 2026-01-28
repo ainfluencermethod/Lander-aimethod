@@ -48,10 +48,13 @@ export const GuidePage: React.FC = () => {
              <span className="text-[#b0ff3e]">AI Influencers</span>
            </h1>
            <div className="w-full h-auto bg-zinc-800 rounded-2xl overflow-hidden relative border border-zinc-700">
-                <img 
-                    src="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/697a44131927c8d10b45b02d.webp" 
-                    alt="AI Influencer on bed" 
+                <video 
+                    src="https://storage.googleapis.com/msgsndr/TGsyH70nsz7y3hijuqTn/media/697a5f95266d73b74dff596f.mp4" 
                     className="w-full h-full object-cover opacity-80"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                 />
            </div>
         </header>
