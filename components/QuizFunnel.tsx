@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Check, Lock, ChevronRight, Loader2, Calculator } from 'lucide-react';
+import { ArrowRight, Check, ChevronRight, Loader2, Calculator, ArrowLeft } from 'lucide-react';
 
 interface QuizProps {
   onComplete: (email: string) => void;
@@ -145,4 +144,106 @@ export const QuizFunnel: React.FC<QuizProps> = ({ onComplete, onBack }) => {
            <div className="absolute inset-0 border-4 border-zinc-800 rounded-full"></div>
            <div className="absolute inset-0 border-4 border-[#b0ff3e] rounded-full border-t-transparent animate-spin"></div>
            <div className="absolute inset-0 flex items-center justify-center">
-             <Calculator className="text-[#b0ff
+             <Calculator className="text-[#b0ff3e]" size={32} />
+           </div>
+        </div>
+        <div className="text-center space-y-2">
+            <h3 className="text-2xl font-black text-white italic tracking-tighter">
+                {analysisStep === 0 && "ANALYZING YOUR ANSWERS..."}
+                {analysisStep === 1 && "CALCULATING EARNING POTENTIAL..."}
+                {analysisStep === 2 && "GENERATING CUSTOM BLUEPRINT..."}
+            </h3>
+            <p className="text-zinc-500 font-mono text-xs uppercase tracking-widest">
+                PLEASE WAIT
+            </p>
+        </div>
+      </div>
+    );
+  }
+
+  // 2. EMAIL OPTIN
+  if (isAnalyzing && analysisStep >= 3) {
+      return (
+          <div className="fixed inset-0 z-50 bg-[#09090b] flex items-center justify-center p-4 animate-fade-in">
+              <div className="max-w-md w-full bg-zinc-900 border border-zinc-800 p-8 rounded-3xl relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-[#b0ff3e]"></div>
+                  
+                  <div className="text-center space-y-6 mb-8">
+                      <div className="inline-flex items-center gap-2 bg-[#b0ff3e]/10 text-[#b0ff3e] px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border border-[#b0ff3e]/20">
+                          <Check size={12} strokeWidth={3} /> Analysis Complete
+                      </div>
+                      <h2 className="text-3xl font-black text-white tracking-tighter">Your AI Blueprint <br />Is Ready</h2>
+                      <p className="text-zinc-400">Enter your email below to receive your personalized roadmap and 1-day free access.</p>
+                  </div>
+
+                  <form onSubmit={handleEmailSubmit} className="space-y-4">
+                      <input 
+                        type="email" 
+                        required
+                        placeholder="Enter your best email..."
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full bg-black border border-zinc-800 text-white px-6 py-4 rounded-xl focus:outline-none focus:border-[#b0ff3e] transition-colors"
+                      />
+                      <button 
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full bg-[#b0ff3e] hover:bg-[#9de635] text-black font-black text-lg py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
+                      >
+                          {isSubmitting ? <Loader2 className="animate-spin" /> : <>Access My Blueprint <ArrowRight size={20} /></>}
+                      </button>
+                  </form>
+                  <button onClick={onBack} className="w-full text-center text-zinc-600 text-xs font-bold uppercase tracking-widest mt-6 hover:text-zinc-400">Start Over</button>
+              </div>
+          </div>
+      )
+  }
+
+  // 3. QUIZ QUESTIONS
+  const currentQ = QUESTIONS[step];
+
+  return (
+    <div className="fixed inset-0 z-40 bg-[#09090b] flex flex-col">
+       {/* Progress Bar */}
+       <div className="h-1 bg-zinc-900 w-full">
+          <div 
+            className="h-full bg-[#b0ff3e] transition-all duration-500 ease-out"
+            style={{ width: `${((step + 1) / QUESTIONS.length) * 100}%` }}
+          ></div>
+       </div>
+
+       {/* Header */}
+       <div className="p-6 flex justify-between items-center">
+          <button onClick={onBack} className="text-zinc-500 hover:text-white flex items-center gap-2 text-xs font-bold uppercase tracking-widest">
+              <ArrowLeft size={14} /> Back
+          </button>
+          <div className="text-zinc-600 text-xs font-black uppercase tracking-widest">
+              Question {step + 1}/{QUESTIONS.length}
+          </div>
+       </div>
+
+       {/* Question Area */}
+       <div className="flex-1 flex flex-col justify-center max-w-2xl mx-auto w-full px-6 pb-24">
+          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter mb-12 text-center leading-tight">
+              {currentQ.question}
+          </h2>
+
+          <div className="grid gap-4">
+              {currentQ.options.map(opt => (
+                  <button
+                    key={opt.id}
+                    onClick={() => handleOptionClick(opt.id)}
+                    className="bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 p-6 rounded-2xl flex items-center gap-6 group transition-all text-left"
+                  >
+                      <span className="text-4xl group-hover:scale-110 transition-transform duration-300">{opt.icon}</span>
+                      <span className="text-xl font-bold text-zinc-200 group-hover:text-white">{opt.text}</span>
+                      <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                          <ChevronRight className="text-[#b0ff3e]" />
+                      </div>
+                  </button>
+              ))}
+          </div>
+       </div>
+    </div>
+  );
+};

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Hero } from './components/Hero';
 import { OfferSection } from './components/OfferSection';
@@ -12,6 +11,7 @@ import { WhoForSection } from './components/WhoForSection';
 import { GuaranteeSection } from './components/GuaranteeSection';
 import { LeadMagnet } from './components/LeadMagnet';
 import { GuidePage } from './components/GuidePage';
+import { IncomeCalculator } from './components/IncomeCalculator';
 
 const App: React.FC = () => {
   const [showLeadMagnet, setShowLeadMagnet] = useState(false);
@@ -72,6 +72,11 @@ const App: React.FC = () => {
 
         {/* Who it is for */}
         <WhoForSection />
+        
+        {/* Calculator */}
+        <div className="px-4">
+          <IncomeCalculator />
+        </div>
 
         {/* The Offer */}
         <OfferSection />
