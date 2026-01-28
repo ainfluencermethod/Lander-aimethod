@@ -1,6 +1,4 @@
-
 import React from 'react';
-import { ShieldCheck } from 'lucide-react';
 
 export const GuaranteeSection: React.FC = () => {
   return (

@@ -1,5 +1,3 @@
-
-import React from 'react';
 import { Testimonial, Feature } from './types';
 
 export const PRIMARY_GREEN = '#b0ff3e';
